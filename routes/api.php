@@ -3,9 +3,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthenticateController;
-use App\Http\Controllers\Api\V1\ThongBaoController;
-use App\Http\Controllers\Api\V1\LoaiThongBaoController;
-use App\Http\Controllers\Api\V1\NhanVienController;
 
 /*
 |--------------------------------------------------------------------------

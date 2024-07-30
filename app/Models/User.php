@@ -42,19 +42,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-    public function thongBao()
-    {
-        return $this->belongsToMany(User::class, 'thong_bao_users', 'user_id', 'thong_bao_id');
-    }
-
-    public function nhanVien()
-    {
-        return $this->hasOne(NhanVien::class, 'user_id', 'id');
-    }
-
-    public function getNhomNhanSuAttribute()
-    {
-        return NhomNhanSu::query()->whereJsonContains('user_ids', $this->id)->pluck('id')->toArray();
-    }
 }
